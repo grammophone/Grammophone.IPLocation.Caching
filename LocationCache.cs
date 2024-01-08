@@ -67,6 +67,9 @@ namespace Grammophone.IPLocation.Caching
 
 			return await memoryCache.GetOrCreateAsync<Models.Location>(ipAddress.ToString(), async cacheEntry =>
 			{
+				cacheEntry.Size = 1;
+				cacheEntry.SlidingExpiration = TimeSpan.FromHours(1);
+
 				using (var locationProvider = locationProviderFactory.CreateLocationProvider())
 				{
 					return await locationProvider.GetLocationAsync(ipAddress);
