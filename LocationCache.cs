@@ -6,7 +6,7 @@ using Microsoft.Extensions.Options;
 namespace Grammophone.IPLocation.Caching
 {
 	/// <summary>
-	/// Abstract base for a cache resolving IP addresses to location information.
+	/// Cache resolving IP addresses to location information.
 	/// </summary>
 	public class LocationCache : IDisposable
 	{
