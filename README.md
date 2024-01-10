@@ -11,7 +11,7 @@ The following example uses location providers depending on MaxMind API's defined
 [Grammophone.IPLocation.MaxMind](https://github.com/grammophone/Grammophone.IPLocation.MaxMind) library,
 which should also be present in a sibling directory along the [Grammophone.IPLocation](https://github.com/grammophone/Grammophone.IPLocation) library.
 
-The cache uses aggregation of location providers to first try web API querying then falling back to database query if the former fails.
+The cache uses aggregation of location providers to first try web API querying then falling back to database querying if the former fails.
 ```CS
 string databaseFilename = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GeoLite2-City.mmdb");
 
